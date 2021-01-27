@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info p {
+    margin-right: 1em;
+}
+
+.header-type {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat .status {
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 2px 4px 2px 4px;
+    margin-top: 12px;
+}
+
+.content div {
+    margin-top: 0;
+}
+
+.chat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chat .username {
+    margin-right: 0.5em;
+}
+
+.chat-messages {
+    width: 500px;
+    height: 300px;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    overflow: auto;
+}
+
+.chat-messages .message {
+    border: 1px solid gray;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.new-message {
+    width: 500px;
+    border: 1px solid gray;
+    margin-bottom: 30px;
+    padding: 5px 5px 4px 5px;
+}
+
+.new-message .add-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

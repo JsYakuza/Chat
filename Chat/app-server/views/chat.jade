@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    div(class='container chat')
+        div(class='channels')
+            h5(class='grey-text') Channels
+            div(class='collection')
+                - for (let i=0;i < channels.length; i++)
+                    a(class='collection-item' href='/chat/load/#{channels[i].name}')='#'+channels[i].name
+        div(class='messages')
+            h5(class='grey-text') Messages
+            div(class='chat-messages')
+                - if(messages)
+                    - for (let i=0;i < messages.length;i++)
+                        div(class='message')
+                            p=messages[i].createDate
+                            p=messages[i].text
+            div(class='new-message')
+                form(action='/chat/:messages/channel/#{nowChannel}', method='post')
+                    input(type='text' name='userMessage')
+                    div(class='add-block')
+                        h6=username
+                        button(class="btn waves-effect red lighten-1" type="submit" name="action" style='margin-right:10px') Paste
+                            i(class="material-icons right") send
+        div(class='users')
+            h5(class='grey-text') Members
+            hr
+            div
+                - for (let i=0;i < users.length; i++)
+                    div(class='chat')
+                        - if(users[i].status === 'offline')
+                            p(class='grey-text username')=users[i].username
+                            p(class='status red lighten4 white-text')=users[i].status
+                        - if(users[i].status === 'online')
+                            p(class='red-text username')=users[i].username
+                            p(class='status red lighten4 white-text')=users[i].status
+            hr

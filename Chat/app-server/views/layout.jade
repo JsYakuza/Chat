@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        meta(name='viewport', content='width-device-width, initial-scale=1.0')
+        title Main Page
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    body
+        div(class='header-type red lighten-1')
+            div(class='greeting container')
+                h5(class='white-text') Welcome to Live chat
+            div(class='user-info')
+                p(class='white-text darken-4 username')=username
+                p
+                    a(class='white-text' href='/users') Log Out
+        block content
+        div(class="header-type red lighten-1")
+            div(class='container')
+                h5(class='white-text') Tutorial Project
+                p(class='white-text darken-4') This is my NodeJs tutorial project
+
